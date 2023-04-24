@@ -15,6 +15,10 @@ app.use("/api/movies", moviesRoute);
 app.use("/api/theatres", theatresRoute);
 app.use("/api/bookings", bookingsRoute);
 
+app.get("/", (req, res) => {
+  res.send("Home page");
+});
+
 const port = process.env.PORT || 5000;
 
 const path = require("path");
